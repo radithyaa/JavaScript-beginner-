@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Yara <3</title>
+<style>
+    @import url('https://fonts.cdnfonts.com/css/sf-pixelate');
+    @import url(https://db.onlinewebfonts.com/c/a78cfad3beb089a6ce86d4e280fa270b?family=Calibri);
+        *{
+            font-family: 'SF Pixelate', sans-serif;
+            font-size: 0.9em;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            background-color: whitesmoke;
+            min-height: 100vh;
+        }
+        button{
+            font-family: serif;
+            font-size: 1.4em;
+            width: 60px;
+            height: 23px;
+            margin: 25px;
+            margin-top: 15px;
+        }
+        .nobutton {
+            position: relative;
+        }
+        h2{
+            font-family: serif;
+            text-align: center;
+            font-size: 2em;
+            z-index: 100;
+        }
+        .letter {
+        left: 5px;
+        bottom: 0px;
+        position: relative;
+        cursor: pointer;
+        animation: letter 1.5s linear infinite;
+        }
+        .text{
+            text-align: center;
+        }
+        .canvas{
+        height: 90h;
+        width: 100vh;
+        background-color: whitesmoke;
+        box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.8);
+        color: rgb(30, 30, 30);   
+        border-radius: 5.5px;    
+        display: block;
+        align-content: center;
+        animation: canvas;
+        animation-duration: 2.5s;
+        overflow: hidden;
+        }
+        .surat{
+            text-align: center;
+            position: relative;
+            top: 10px;
+            font-family: 'Calibri';
+            font-weight: 900;
+            font-size: 2.5em;
+        }
+        .par{
+            font-family: 'Calibri';
+            font-size: 1.3em;
+            font-weight: 600;
+            margin: 25px;
+            margin-top: 5px;
+            text-align: justify;
+        }
+        h3{
+            font-family: 'Calibri';
+        }
+        h4{
+            font-family: 'Calibri';
+            text-align: center;
+            font-size: 1.7em;
+            font-weight: 600;
+            color: #e96770;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+        .gif{
+            display: block;
+            margin: 10px;
+            max-height: 200px;
+        }
+        .uwugif{
+            position: relative;
+            bottom: 60px;
+            left: 75px;
+            transform: scale(0.75);
+        }
+
+        @keyframes letter {
+            0% {
+                bottom: 0px;
+            }
+            50% {
+                bottom: 30px;
+            }
+        }
+        @keyframes canvas{
+            from {
+                height: 0vh;
+            }
+            to {
+                height: 90vh;
+            }
+        }
+</style>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 class="question">Do you love me?</h2>
+        <div class="button">
+            <button class="yesbutton">Yes</button>
+            <button class="nobutton">No</button>
+        </div>
+    </div>
+    <img src="" alt="">
+<script>
+        const wrapper = document.querySelector(".wrapper")
+        const question = document.querySelector(".question")
+        const button = document.querySelector(".button")
+        const yesbutton = document.querySelector(".yesbutton")
+        const nobutton = document.querySelector(".nobutton")
+
+        nobutton.addEventListener("click", () => {
+            const nobuttonreal = nobutton.getBoundingClientRect();
+            const maxX = window.innerWidth - nobuttonreal.width;
+            const maxY = window.innerHeight - nobuttonreal.height;
+
+            const randomX = Math.floor(Math.random() * maxX / 2);
+            const randomY = Math.floor(Math.random() * maxY / 2);
+
+            nobutton.style.left = (randomX - 350) * 1.5 + "px";
+            nobutton.style.top = (randomY - 150) * 1.5 + "px";
+        });
+
+        yesbutton.addEventListener("click", () => {
+            wrapper.innerHTML = '<img src="https://8adc-2001-448a-2061-1893-b8cf-c8da-9756-7597.ngrok-free.app/Letter2.png" alt="letter" class="letter"><br> <div class="text">here some message for you:3<br>(click)</div>';
+            const letter = document.querySelector(".letter");
+
+            letter.addEventListener("click", () => {
+                document.body.style.backgroundColor = "#e96770"
+                wrapper.innerHTML = `<div class="gif"><img src="https://8adc-2001-448a-2061-1893-b8cf-c8da-9756-7597.ngrok-free.app/uwu.gif" alt="gif" class="uwugif"></div><div class="canvas"><div class="surat"><h3>Happy birthday yara<3</h3></div><br><br><div class="par">happy birthday sayangkuuuu, selamat ulang tahunn, terimakasih telah menemani perjalanan hidupku ini selama 5 bulan berada di dunia, semoga dalam ulang tahun kali ini kamu selalu diberi kesehatan dan kelancaran dalam segala hal yang kamu impikan dan kamu cita citakan, semoga kedepannya kamu bisa jadi pribadi yang lebih baik lagi dari sekarang. Kalau bisa kurang kurangin begadang yang kurang bermanfaatnya, scroll tiktok nya, jangan lupa juga buat belajar biar bisa mempertahanin ranking kamu lagi di kelas biar gk diomelin papa, terimakasih telah menjadi pacar setiaku yang di setiap ada "permasalahan" selalu menjadi yang inisiatif untuk ngalah pertama di semua hal walaupun itu aku yang buat huhuu:'), maafin kalau aku selama 5 bulan ini suka ngebuat kamu kesel, kamu cemburu, kamu sedih atas segala sikap aku yang kadang egois sama kamu, maafin aku yang kadang suka lama ngebales chat kamu atau jarang on dan sekalinya on itu pun balesan aku singkat singkat banget, maafin aku kalo pacaran sama aku banyak banget yang namanya silent treatment sampai kamu kadang ngerasa kesepian dan bahkan gak tau kamu salahnya dimana. Maaf juga buat ulang tahun kali ini aku cuma bisa ngasih code ini buat hadiah pertama kamu di ulang tahun karena kita terpisah jarak yang jauh sampai aku gak bisa ngasih hadiah secara langsung. aku harap hadiah terakhir ini sesuai sama yang kamu mau walaupun aku belum ngasih secara wujud fisiknya. semoga aja kamu suka<3<br><br><br><a href="https://8adc-2001-448a-2061-1893-b8cf-c8da-9756-7597.ngrok-free.app/flower.html"><h4>Click</h4></a></div></div><br><br>`;
+            });
+        });
+</script>
+</body>
+</html>

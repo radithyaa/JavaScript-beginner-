@@ -1,0 +1,91 @@
+*{
+    font-family: sans-serif;
+    box-sizing: border-box; 
+}
+body{
+    background-color: #ddd;
+    line-height: 1.65;
+}
+
+
+.container-satu{
+    background-color: white;
+    width: 95vw;
+    padding: 1em;
+    margin: auto;
+    display: flex;
+}
+
+.sidebar-satu{
+    flex: 1;
+    order: 1;
+}
+.sidebar-dua{
+    flex: 1;
+    order: 3;
+}
+.main-content{
+    flex: 3;
+    order: 2;
+}
+
+
+.container-dua{
+    width: 95vw;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layanan{
+    margin: 1em;
+    padding: 1em;
+}
+.layanan.satu{
+    background-color: rgb(119, 119, 255);
+    flex: 1;
+}
+.layanan.dua{
+    background-color: rgb(171, 218, 101);
+    flex: 1;
+}
+.layanan.tiga{
+    background-color: rgb(222, 102, 102);
+    flex: 1;
+}
+
+
+.container-tiga{
+    width: 95vw;
+    margin: auto;
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+}
+
+.thumbnail{
+    width: 25%;
+    padding: 0.2em;
+}
+
+.thumbnail img{
+    width: 100%;
+}
+
+@media (max-width:600px) {
+    .container-satu{
+        display: block;
+    }
+    .sidebar-satu{
+        display: none;
+    }
+    .container-dua{
+        display: block;      
+    }
+    .thumbnail{
+        width: 50%;
+    }
+}
